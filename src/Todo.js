@@ -30,8 +30,6 @@ const Todo = () => {
         if(window.confirm("Delete?")){
             setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
         }
-       
-      
     };
   // JSX 
     return (
