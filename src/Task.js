@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Task = ({ task, toggleTask, deleteTask }) => {
   return (
     <div className="task">
