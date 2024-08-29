@@ -27,7 +27,7 @@ const Todo = () => {
   //function for deleting a task from the to do list
     const deleteTask = (taskId) => {
         
-        if(window.confirm("Delete?")){
+        if(window.confirm("Are you sure you want to delete?")){
             setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
         }
     };
@@ -44,14 +44,18 @@ const Todo = () => {
           />
           <button onClick={addTask}>Add Task</button>
         </div>
+        <div className="todo list">
         {tasks.map((task) => (
-          <Task
-            key={task.id}
-            task={task}
-            toggleTask={toggleTask}
-            deleteTask={deleteTask}
-          />
+         <Task
+          key={task.id}
+          task={task}
+          toggleTask={toggleTask}
+          deleteTask={deleteTask}
+        />
         ))}
+        To do list
+        </div>
+        
       </div>
     );
   };
